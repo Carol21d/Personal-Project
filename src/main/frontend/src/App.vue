@@ -2,15 +2,18 @@
 import { RouterLink, RouterView } from 'vue-router'
 import HelloWorld from './components/HelloWorld.vue'
 import LandingView from './views/LandingView.vue'
+import Greeting from './components/Greeting.vue'
+import Navbar from './components/Navbar.vue'
 </script>
 
 <template>
 
 
 
-<LandingView />
+<!-- <LandingView /> -->
 
-
+<!-- <Greeting /> -->
+<Navbar/>
 
 
 
