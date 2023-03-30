@@ -47,9 +47,25 @@ export default {
           ></v-list-item>
         </v-list>
       </v-navigation-drawer>
-      <v-main style="height: 250px">hola</v-main>
+      <v-main style="height: 900px">
+        <p class="font-italic text-lg-h4 mt-10 ">Hola, Ruteros</p>
+        <v-img
+            
+            
+            aspect-ratio="16/9"
+            cover
+            class="sociales"
+            src="../../src/assets/images/socialnetwork.png"
+          ></v-img>
+
+      </v-main>
     </v-layout>
   </v-card>
 </template>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.sociales{
+  width: 10px;
+  height: 10px;
+}
+</style>
