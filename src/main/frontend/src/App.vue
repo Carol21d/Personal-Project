@@ -4,6 +4,8 @@ import HelloWorld from './components/HelloWorld.vue'
 import LandingView from './views/LandingView.vue'
 import Greeting from './components/Greeting.vue'
 import Navbar from './components/Navbar.vue'
+import Categories from './components/Categories.vue'
+
 </script>
 
 <template>
@@ -13,7 +15,9 @@ import Navbar from './components/Navbar.vue'
 <!-- <LandingView /> -->
 
 <!-- <Greeting /> -->
+<!-- <RecommendedRoutes/> -->
 <Navbar/>
+<!-- <Categories/> -->
 
 
 

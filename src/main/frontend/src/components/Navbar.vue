@@ -4,62 +4,52 @@ export default {
     return {
       drawer: true,
       items: [
-        { title: "Search", icon: "mdi-magnify" },
-        { title: "Home", icon: "mdi-home" },
-        { title: "Categories", icon: "mdi-view-dashboard" },
+        { title: "Home", icon: "mdi-magnify" },
+        { title: "My Account", icon: "mdi-home" },
+        { title: "Users", icon: "mdi-view-dashboard" },
       ],
       rail: true,
     };
   },
 };
 </script>
+
 <template>
-  <v-card>
-    <v-layout >
-      <v-navigation-drawer  v-model="drawer" :rail="rail" permanent @click="rail = false" >
-       
+  <v-card class="card">
+    <v-layout class="test">
+      <v-navigation-drawer style="width: 155px" class="navi" v-model="drawer">
+        <v-list-item class="foto justify-content-center ml-8" nav>
+          <v-img
+            :width="70"
+            aspect-ratio="16/9"
+            cover
+            src="../../src/assets/images/logo.png"
+          ></v-img>
+        </v-list-item>
+        <p class="font-weight-black ml-10">Ruteros</p>
 
-          <v-list-item   prepend-avatar="../../src/assets/images/logo.png"  title="RUTEROS" nav>
-            <template v-slot:append>
-              <v-btn  variant="text" icon="mdi-chevron-left" @click.stop="rail = !rail"></v-btn>
-            </template>
-          </v-list-item>
 
-         
-     
-        <v-divider></v-divider>
-
-        <v-list density="compact" nav>
-          <v-list-item prepend-icon="mdi-magnify" title="Search"  value="search"></v-list-item>
-          <v-list-item prepend-icon="mdi-home" title="Home" value="home"></v-list-item>
-          <v-list-item prepend-icon="mdi-view-dashboard" title="Categories" value="categories"></v-list-item>
+        <v-list density="compact" class="list" nav>
+          <v-list-item
+            prepend-icon="mdi-magnify"
+            class="icon__search ml-12"
+            value="search"
+          ></v-list-item>
+          <v-list-item
+            prepend-icon="mdi-home"
+            class="icon__home ml-12"
+            value="home"
+          ></v-list-item>
+          <v-list-item
+            prepend-icon="mdi-view-dashboard"
+            class="icon__categories ml-12"
+            value="categories"
+          ></v-list-item>
         </v-list>
       </v-navigation-drawer>
-      <v-main style="height: 10vh">
-        <v-card-title class="title justify-space-between font-italic text-h6 text-md-h5 text-lg-h4">Hola, Ruteros!!!
-          <v-img :width="100" aspect-ratio="1/1" cover src="../assets/images/socialnetwork.png"></v-img>
-        </v-card-title>
-    </v-main>
+      <v-main style="height: 250px">hola</v-main>
     </v-layout>
   </v-card>
 </template>
-<style lang="scss" scoped>
 
-.v-list-item prepend-avatar {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-}
-
-  .title {
-    position: absolute;
-    top: .7rem;
-    font-family: Kalam;
-    font-size:45px;
-    font-weight: 400;
-   
-  
-  }
-
-
-</style>
+<style lang="scss" scoped></style>
