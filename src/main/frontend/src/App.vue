@@ -1,25 +1,13 @@
 <script setup>
-import { RouterLink, RouterView } from 'vue-router'
-import HelloWorld from './components/HelloWorld.vue'
-import LandingView from './views/LandingView.vue'
-import Greeting from './components/Greeting.vue'
-import Navbar from './components/Navbar.vue'
-import Categories from './components/Categories.vue'
+import { RouterLink, RouterView } from "vue-router";
+import HelloWorld from "./components/HelloWorld.vue";
 
+import Dashboardview from "./views/Dashboardview.vue";
 </script>
 
 <template>
-
-
-
-<!-- <LandingView /> -->
-
-<!-- <Greeting /> -->
-<!-- <RecommendedRoutes/> -->
-<Navbar/>
-<!-- <Categories/> -->
-
-
+  <Dashboardview />
+  
 
   <!-- <header>
   
@@ -34,8 +22,7 @@ import Categories from './components/Categories.vue'
     </div> -->
   <!-- </header> -->
 
-  <!-- <RouterView /> --> 
+  <!-- <RouterView /> -->
 </template>
 
-<style scoped>
-</style>
+<style scoped></style>
