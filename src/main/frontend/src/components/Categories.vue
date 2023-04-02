@@ -24,6 +24,7 @@ export default {
         <v-col cols="6" md="4" class="galeria ml-4" v-for="(item, index) in items" :key="index">
           <v-img :src="item.src" height="120" aspect-ratio="16/9" contain></v-img>
         </v-col>
+   
       </v-row>
     </v-fade-transition>
   </v-container>
@@ -31,7 +32,7 @@ export default {
 <style lang="scss" scoped>
 .categorias {
   position: absolute;
-  left: 122px;
+  left: 85px;
   top: 165px;
 
   .galeria {
