@@ -1,36 +1,43 @@
-<script setup>
+<script>
+export default {
+  data: () => ({
+    items: [
+      { src: "../../src/assets/images/combinados.png" },
+      { src: "../../src/assets/images/escalada.png" },
+      { src: "../../src/assets/images/pet.png" },
+      { src: "../../src/assets/images/acuaticos.png" },
+      { src: "../../src/assets/images/mountain.png" },
+      { src: "../../src/assets/images/senderismo.png" },
+    ],
+    transparent: "rgba(255, 255, 255, 0)",
+  }),
+};
 </script>
 
 <template>
-  <v-row>
-      <v-col
-        v-for="n in 6"
-        :key="n"
-        class="d-flex child-flex"
-        cols="6"
-      >
-        <v-img 
-          :src="`https://picsum.photos/500/300?image=${n * 5 + 10}`"
-         
-          aspect-ratio="1/4"
-          cover
-          class="bg-grey-lighten-2"
-        >
-          <template v-slot:placeholder>
-            <v-row
-              class="h-64 mt-32"
-              align="center"
-              justify="center"
-            >
-             
-            </v-row>
-          </template>
-        </v-img>
-      </v-col>
-    </v-row>
+  <div class="text-left relative">
+    <v-card-title class="categorias text-h6 text-md-h5 font-italic text-lg-h4">Categorias</v-card-title>
+  </div>
+  <v-container class="fill-height" fluid>
+    <v-fade-transition mode="out-in">
+      <v-row>
+        <v-col cols="6" md="4" class="galeria ml-4" v-for="(item, index) in items" :key="index">
+          <v-img :src="item.src" height="120" aspect-ratio="16/9" contain></v-img>
+        </v-col>
+      </v-row>
+    </v-fade-transition>
+  </v-container>
 </template>
 <style lang="scss" scoped>
-.v-img__img{
-    width: 30px;
+.categorias {
+  position: absolute;
+  left: 122px;
+  top: 165px;
+
+  .galeria {
+    padding: 14px;
+    position: relative;
+    bottom: 20px;
+  }
 }
 </style>
