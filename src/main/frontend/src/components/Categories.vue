@@ -16,15 +16,28 @@ export default {
 
 <template>
   <div class="text-left relative">
-    <v-card-title class="categorias text-h6 text-md-h5 font-italic text-lg-h4">Categorias</v-card-title>
+    <v-card-title class="categorias text-h6 text-md-h5 font-italic text-lg-h4"
+      >Categorias</v-card-title
+    >
   </div>
   <v-container class="fill-height" fluid>
     <v-fade-transition mode="out-in">
       <v-row>
-        <v-col cols="6" md="4" class="galeria ml-4" v-for="(item, index) in items" :key="index">
-          <v-img :src="item.src" height="120" aspect-ratio="16/9" contain></v-img>
+        <v-col
+          cols="6"
+          md="4"
+          class="galeria ml-4"
+          v-for="(item, index) in items"
+          :key="index"
+        >
+          <v-img
+            :src="item.src"
+            height="120"
+            aspect-ratio="16/9"
+            cover
+            class="img"
+          ></v-img>
         </v-col>
-   
       </v-row>
     </v-fade-transition>
   </v-container>
@@ -32,13 +45,19 @@ export default {
 <style lang="scss" scoped>
 .categorias {
   position: absolute;
-  left: 85px;
-  top: 165px;
+  left: 65px;
+  top: 185px;
 
   .galeria {
     padding: 14px;
     position: relative;
     bottom: 20px;
+
+    .img:hover {
+      transform: translateY(-5px);
+      box-shadow: 0px 2px 21px 7px rgba(0, 0, 0, 0.51);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
   }
 }
 </style>

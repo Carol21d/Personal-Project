@@ -7,7 +7,7 @@ import RecommendedRoutes from "../components/RecommendedRoutes.vue";
   <div>
     <Navbar />
     <v-container fluid>
-      <v-row class="main">
+      <v-row class="wrapper">
         <v-col class="categorias" cols="8">
           <Categories />
         </v-col>
@@ -25,7 +25,8 @@ import RecommendedRoutes from "../components/RecommendedRoutes.vue";
   width: 100%;
   z-index: 100;
 }
-.main {
-  margin-left: 20px;
+.wrapper {
+  //usamos !important por si hay una regla css esta tenga mas relevancia que la otra.
+  margin-left: 20px !important;
 }
 </style>
