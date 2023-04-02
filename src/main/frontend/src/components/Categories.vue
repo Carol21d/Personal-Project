@@ -16,27 +16,13 @@ export default {
 
 <template>
   <div class="text-left relative">
-    <v-card-title class="categorias text-h6 text-md-h5 font-italic text-lg-h4"
-      >Categorias</v-card-title
-    >
+    <v-card-title class="categorias text-h6 text-md-h5 font-italic text-lg-h4">Categorias</v-card-title>
   </div>
   <v-container class="fill-height" fluid>
     <v-fade-transition mode="out-in">
       <v-row>
-        <v-col
-          cols="6"
-          md="4"
-          class="galeria ml-4"
-          v-for="(item, index) in items"
-          :key="index"
-        >
-          <v-img
-            :src="item.src"
-            height="120"
-            aspect-ratio="16/9"
-            cover
-            class="img"
-          ></v-img>
+        <v-col cols="6" md="4" class="galeria ml-4" v-for="(item, index) in items" :key="index">
+          <v-img :src="item.src" height="120" aspect-ratio="16/9" cover class="img"></v-img>
         </v-col>
       </v-row>
     </v-fade-transition>
@@ -47,6 +33,10 @@ export default {
   position: absolute;
   left: 65px;
   top: 185px;
+      font-family: Kalam  !important;
+      font-size: 40px;
+      font-style: italic;
+      font-weight: 600;
 
   .galeria {
     padding: 14px;
