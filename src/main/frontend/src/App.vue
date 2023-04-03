@@ -1,13 +1,14 @@
 <script setup>
 import { RouterLink, RouterView } from "vue-router";
-import HelloWorld from "./components/HelloWorld.vue";
+
 import AquaticView from "./views/Categories/AquaticView.vue";
 import Dashboardview from "./views/Dashboardview.vue";
+import AboutView from "./views/AboutView.vue";
 </script>
 
 <template>
   <!-- <Dashboardview /> -->
-  <AquaticView/>
+  <AboutView/>
 
   <!-- <header>
   
