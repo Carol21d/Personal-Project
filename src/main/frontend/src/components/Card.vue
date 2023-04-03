@@ -66,7 +66,7 @@ const cards = reactive([
         <v-row>
             <v-col v-for="card in cards" :key="card.id" cols="4">
                 <v-hover v-slot="{ isHovering, props }">
-                    <v-card v-bind="props" :elevation="isHovering ? 24 : 6" class="mx-auto pa-6" max-width="350">
+                    <v-card v-bind="props" :elevation="isHovering ? 24 : 6" class="mx-auto pa-6" max-width="400">
                         <v-img class="align-end text-white" height="190"
                             src="https://cdn.vuetifyjs.com/images/cards/docks.jpg" cover>
                             <v-card-title>{{ card.title }}</v-card-title>
