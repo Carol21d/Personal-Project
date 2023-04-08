@@ -1,17 +1,16 @@
-<script>
-export default {
-  data: () => ({
-    items: [
+<script setup>
+import { ref } from 'vue';
+
+  const items = ref ([
       { src: "../../src/assets/images/combinados.png" },
       { src: "../../src/assets/images/escalada.png" },
       { src: "../../src/assets/images/pet.png" },
       { src: "../../src/assets/images/acuaticos.png" },
       { src: "../../src/assets/images/mountain.png" },
       { src: "../../src/assets/images/senderismo.png" },
-    ],
-    transparent: "rgba(255, 255, 255, 0)",
-  }),
-};
+    ]);
+  
+  const transparent = ref("rgba(255, 255, 255, 0)");
 </script>
 
 <template>
@@ -22,7 +21,7 @@ export default {
     <v-fade-transition mode="out-in">
       <v-row>
         <v-col cols="6" md="4" class="galeria ml-4" v-for="(item, index) in items" :key="index">
-          <v-img :src="item.src" height="120" aspect-ratio="16/9" cover class="img"></v-img>
+          <v-img :src="item.src" height="120"  cover class="img"></v-img>
         </v-col>
       </v-row>
     </v-fade-transition>

@@ -26,7 +26,7 @@ import RecommendedRoutes from "../components/RecommendedRoutes.vue";
   z-index: 100;
 }
 .wrapper {
-  //usamos !important por si hay una regla css esta tenga mas relevancia que la otra.
+  //usamos !important por si hay una regla css esta tenga mas relevancia que la otra.Mala practica
   margin-left: 20px !important;
 }
 </style>
