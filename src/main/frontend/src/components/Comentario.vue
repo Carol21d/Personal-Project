@@ -49,8 +49,8 @@ export default {
 // };
 </script>
 
-<template>
-  <v-row class=" justify-center mt-12">
+<template><!--quitamos mt-12-->
+  <v-row class=" justify-center">
     <v-dialog v-model="dialog" persistent width="600px">
       <template v-slot:activator="{ props }">
         <v-btn color="primary" v-bind="props"> AÑADIR COMENTARIO </v-btn>
