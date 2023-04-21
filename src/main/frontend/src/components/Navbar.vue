@@ -2,7 +2,7 @@
 </script>
 
 <template>
-  <v-layout>
+  <v-layout >
     <v-card>
       <v-navigation-drawer style="width: 70px" color="#006064" expand-on-hover rail>
         <v-list class="justify-center ml-2">
@@ -10,16 +10,25 @@
         </v-list>
         <v-list density="default" nav>
           <v-list-item-group>
-          <v-list-item :to="{ path: '/search'}">
-            <v-icon size="x-large" color="#000000" icon="mdi-magnify"></v-icon>
-          </v-list-item>
-          <v-list-item :to="{path: '/dashboard'}">
-            <v-icon style="height: 90px" size="x-large" color="#000000" icon="mdi-home"></v-icon>
-          </v-list-item>
-          <v-list-item :to="{path: '/dashboard'}">
-            <v-icon size="x-large" color="#000000" icon="mdi-view-dashboard"></v-icon>
-          </v-list-item>
-        </v-list-item-group>
+            <v-list-item>
+              <router-link to="/search">
+                <v-icon size="x-large" color="#000000" icon="mdi-magnify"></v-icon>
+              </router-link>
+            </v-list-item>
+
+            <v-list-item>
+              <router-link to="/dashboard">
+                <v-icon style="height: 90px" size="x-large" color="#000000" icon="mdi-home"></v-icon>
+              </router-link>
+
+            </v-list-item>
+            <v-list-item>
+              <router-link to="/dashboard">
+                <v-icon size="x-large" color="#000000" icon="mdi-view-dashboard"></v-icon>
+              </router-link>
+
+            </v-list-item>
+          </v-list-item-group>
         </v-list>
       </v-navigation-drawer>
       <v-main style="height:250px">
@@ -29,12 +38,13 @@
   </v-layout>
 </template>
 
-<style lang="scss" scoped>
-.title {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-weight: bold;
-  font-style: italic;
-}
+<style lang="css" scoped>
+/* // .title {
+//   font-family: Verdana, Geneva, Tahoma, sans-serif;
+//   font-weight: bold;
+//   font-style: italic;
+// } */
+
 </style>
 
 

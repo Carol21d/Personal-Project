@@ -1,6 +1,13 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import LandingView from '../views/LandingView.vue'
 import Dashboard from '../views/Dashboardview.vue'
+import AboutView from '../views/AboutView.vue'
+import AquacticView from '../views/Categories/AquaticView.vue'
+import BikesView from '../views/Categories/BikesView.vue'
+import ClimbingView from '../views/Categories/ClimbingView.vue'
+import MountainsView from '../views/Categories/MountainsView.vue'
+import CombinedView from '../views/Categories/CombinedView.vue'
+import PetsView  from '../views/Categories/PetsView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -11,42 +18,46 @@ const router = createRouter({
       component: LandingView
     },
     {
-      path: '/dashboard/id',
+      path: '/dashboard',
       name: 'dashboard',
-      component:() => import('@/views/DashboardView.vue')
+      // component:() => import('../views/Dashboardview.vue')
+      component:Dashboard
     },
     {
-      path: '/aquatic',
-      name: 'aquatic',
-      component: () =>import('@/views/AquaticView.vue')
+      path: '/about',
+      name: 'about',
+      // component: () =>import('@/views/AquaticView.vue')
+      component:AquacticView
     },
     {
       path: '/bikes',
       name: 'bike',
-      component: () =>import('@/views/BikesView.vue')
+      component:BikesView
     },
     {
       path: '/climbing',
       name: 'climbing',
-      component: () =>import('@/views/ClimbingView.vue')
+      component: ClimbingView
     },
     {
       path: '/combined',
       name: 'combined',
-      component: () =>import('@/views/CombinedView.vue')
+      component:CombinedView
     },
     {
       path: '/mountains',
       name: 'mountains',
-      component: () =>import('@/views/MountainsView.vue')
+      component: MountainsView
     },
     {
       path: '/pets',
       name: 'pets',
-      component: () =>import('@/views/PetsView.vue')
+      component: PetsView
     }
 
   ]
+
+  
 })
 
 

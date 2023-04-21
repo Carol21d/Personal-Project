@@ -1,5 +1,6 @@
 <script setup>
 import { RouterLink, RouterView } from "vue-router";
+import Dashboardview from "./views/Dashboardview.vue";
 
 
 
@@ -7,7 +8,7 @@ import { RouterLink, RouterView } from "vue-router";
 
 <template>
 
-
+<!-- <Dashboardview/> -->
   <RouterView />
 </template>
 

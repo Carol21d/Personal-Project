@@ -4,25 +4,25 @@ import { RouterView } from 'vue-router';
 import  Navbar from '../components/Navbar.vue';
 import { useRouter } from 'vue-router';
 
-// const router = useRouter();
+const router = useRouter();
 
-// const navigate = (navigateTo)=>{
+const navigate = (navigateTo)=>{
     
-//     router.push({name: navigateTo});
-// }
+    router.push({name: navigateTo});
+}
 
-// </script>
-// <template>
-//     <main>
-//         <div>
-//             <Navbar @navigate-to="" />
-//         </div>
+ </script>
+ <template>
+    <main>
+        <div>
+            <Navbar @navigate-to="" />
+         </div>
 
-//         <section>
-//             <RouterView />
-//         </section>
+        <section>
+            <RouterView />
+      </section>
 
-//     </main>
+    </main>
 </template>
 <style lang="scss"></style>
 

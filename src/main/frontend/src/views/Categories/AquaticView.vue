@@ -7,7 +7,7 @@ import Card from '../../components/Card.vue'
     <div>
         <Navbar/>
         <Card/>
-        
+       
     </div>
 </template>
 <style>

@@ -6,7 +6,7 @@ import RecommendedRoutes from "../components/RecommendedRoutes.vue";
 <template>
   <div>
     <Navbar />
-    <h2>Hola Ruteros</h2>
+ 
     <v-container fluid>
       <v-row class="wrapper">
         <v-col class="categorias" cols="8">
