@@ -1,13 +1,13 @@
 <script setup>
 import { RouterLink, RouterView } from "vue-router";
-import HelloWorld from "./components/HelloWorld.vue";
 
-import Dashboardview from "./views/Dashboardview.vue";
+
+
 </script>
 
 <template>
-  <Dashboardview />
-  
+  <!-- <Dashboardview /> -->
+  <!-- <AboutView/> -->
 
   <!-- <header>
   
@@ -22,7 +22,7 @@ import Dashboardview from "./views/Dashboardview.vue";
     </div> -->
   <!-- </header> -->
 
-  <!-- <RouterView /> -->
+  <RouterView />
 </template>
 
 <style scoped></style>
