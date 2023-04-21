@@ -5,6 +5,7 @@ import Card from '../../components/Card.vue'
 </script>
 <template>
     <div>
+        <h1>Petssdadfsdgdfgjgj</h1>
         <Navbar/>
         <Card/>
        

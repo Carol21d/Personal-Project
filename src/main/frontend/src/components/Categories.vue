@@ -1,16 +1,24 @@
 <script setup>
 import { ref } from 'vue';
+import {useRouter} from 'vue-router';
 
+
+const router = useRouter();
   const items = ref ([
-      { src: "../../src/assets/images/combinados.png" },
-      { src: "../../src/assets/images/escalada.png" },
-      { src: "../../src/assets/images/pet.png" },
-      { src: "../../src/assets/images/acuaticos.png" },
-      { src: "../../src/assets/images/mountain.png" },
-      { src: "../../src/assets/images/senderismo.png" },
+      { src: "../../src/assets/images/combinados.png", route:"/combined" },
+      { src: "../../src/assets/images/escalada.png", route:"/climbing" },
+      { src: "../../src/assets/images/pet.png", route:"/pets" },
+      { src: "../../src/assets/images/acuaticos.png", route:"/aquactic" },
+      { src: "../../src/assets/images/mountain.png", route:"/mountains" },
+      { src: "../../src/assets/images/senderismo.png", route:"/bikes" },
     ]);
   
   const transparent = ref("rgba(255, 255, 255, 0)");
+
+ const clickHandler =(index) =>{
+  router.push(items.value[index].route);
+ };
+
 </script>
 
 <template>
@@ -21,7 +29,7 @@ import { ref } from 'vue';
     <v-fade-transition mode="out-in">
       <v-row>
         <v-col cols="6" md="4" class="galeria ml-4" v-for="(item, index) in items" :key="index">
-          <v-img :src="item.src" height="120"  cover class="img"></v-img>
+          <v-img :src="item.src" height="120"  cover class="img"  @click="clickHandler(index)"></v-img>
         </v-col>
       </v-row>
     </v-fade-transition>

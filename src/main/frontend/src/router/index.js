@@ -24,8 +24,8 @@ const router = createRouter({
       component:Dashboard
     },
     {
-      path: '/about',
-      name: 'about',
+      path: '/aquactic',
+      name: 'aquactic',
       // component: () =>import('@/views/AquaticView.vue')
       component:AquacticView
     },
