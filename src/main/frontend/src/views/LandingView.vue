@@ -1,12 +1,35 @@
-<script></script>
+<script>
+// import  { useRouter } from 'vue-router';
+
+//click al enter de dashboard
+
+// const landing = () => {
+// const router = useRouter();
+// router.push('/dashboard');
+
+// }
+  export default {
+    name: 'LandingView',
+    methods: {
+      landing(){
+        this.$router.push('/dashboard');
+      }
+    }
+  }
+
+
+
+
+
+
+
+</script>
 <template>
   <main>
     <div class="wrapper-container">
       <p>We are going to explore!!!</p>
       <div class="wrapper--btn d-flex justify-space-between">
-        <v-btn variant="tonal" color="black" size="x-large" class="btn--enter"
-          >ENTER</v-btn
-        >
+        <v-btn variant="tonal" color="black" size="x-large" class="btn--enter"  @click="landing">ENTER</v-btn>
       </div>
     </div>
   </main>
@@ -28,6 +51,7 @@ main {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+
     p {
       position: relative;
       bottom: 130px;
@@ -48,9 +72,6 @@ main {
     }
   }
 
-  @media (min-width: 390px){
-    
-    
-  }
+  @media (min-width: 390px) {}
 }
 </style>

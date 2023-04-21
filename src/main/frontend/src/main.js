@@ -18,27 +18,16 @@ import * as directives from 'vuetify/directives'
 
 const app = createApp(App)
 const vuetify = createVuetify({
-  
-  
-  //configuracion vuetify
-  /* components: {
-   defaults:{
-     
-    VNavigationDrawer:{
-      railWidth: 200,
-      elevation:10,
-      rounded: 'md',
-      
-     },
-   } 
-  },*/
-    components,
-    directives,
-  })
+  components,
+  directives,
+})
+
+
+
 
 app.use(createPinia())
 app.use(router)
 app.use(vuetify)
 
 // app.mount('#app')
- app.mount('#app')
+app.mount('#app')
