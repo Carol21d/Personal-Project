@@ -5,12 +5,12 @@ import { useRouter } from 'vue-router';
 
 const router = useRouter();
 const items = ref([
-  { src: "../../src/assets/images/combinados.png", route: "/combined", category: "Combinados 1" },
-  { src: "../../src/assets/images/escalada.png", route: "/climbing", category: "Combinados 2" },
-  { src: "../../src/assets/images/pet.png", route: "/pets", category: "Combinados 3" },
-  { src: "../../src/assets/images/acuaticos.png", route: "/aquactic", category: "Combinados 4" },
-  { src: "../../src/assets/images/mountain.png", route: "/mountains", category: "Combinados 5" },
-  { src: "../../src/assets/images/senderismo.png", route: "/bikes", category: "Combinados 6" },
+  { src: "../../src/assets/images/combinados.png", route: "/combined", category: "Mixed Routes" },
+  { src: "../../src/assets/images/escalada.png", route: "/climbing", category: "Climbing Routes" },
+  { src: "../../src/assets/images/pet.png", route: "/pets", category: "Pet Friendly Routes" },
+  { src: "../../src/assets/images/acuaticos.png", route: "/aquactic", category: "Aquatic Routes" },
+  { src: "../../src/assets/images/mountain.png", route: "/mountains", category: "Mountains Routes" },
+  { src: "../../src/assets/images/senderismo.png", route: "/bikes", category: "Hiking Routes" },
 ]);
 
 const transparent = ref("rgba(255, 255, 255, 0)");
@@ -83,16 +83,16 @@ const clickHandler = (index) => {
         &:hover .categoria{
           transform: translateY(0);
         }
+      }
+    }
+  
+  }
+</style>
         
 
 
 
 
-    }
-  }
-
-}
-</style>
 
 
 
