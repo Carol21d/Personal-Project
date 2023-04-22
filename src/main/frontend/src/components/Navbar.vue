@@ -32,18 +32,13 @@
         </v-list>
       </v-navigation-drawer>
       <v-main style="height:250px">
-        <!-- <p class=" title text-lg-h6 mt-5 ml-5 ">HOLA, RUTEROS</p> -->
+      
       </v-main>
     </v-card>
   </v-layout>
 </template>
 
 <style lang="css" scoped>
-/* // .title {
-//   font-family: Verdana, Geneva, Tahoma, sans-serif;
-//   font-weight: bold;
-//   font-style: italic;
-// } */
 
 </style>
 

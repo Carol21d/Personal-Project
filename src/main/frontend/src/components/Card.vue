@@ -62,7 +62,7 @@ const cards = reactive([
 
 </script>
 <template>
-    <v-container class="mx-auto" max-width="1200">
+    <v-container class="nave mx-auto" max-width="1200">
         <v-row>
             <v-col v-for="card in cards" :key="card.id" cols="4">
                 <v-hover v-slot="{ isHovering, props }">
@@ -90,7 +90,14 @@ const cards = reactive([
         </v-row>
     </v-container>
 </template>
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.nave{
+    display: flex;
+    position: absolute;
+    top: 30%;
+    left: 10%;
+}
+</style>
 
 
 
