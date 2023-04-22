@@ -9,7 +9,7 @@ const cards = reactive([
         location: "Location 1",
         image: "https://cdn.vuetifyjs.com/images/cards/docks.jpg",
         icon: "../../src/assets/images/icon-beach.png",
-        level: "FÁCIL"
+        level: "EASY"
     },
 
     {
@@ -18,7 +18,7 @@ const cards = reactive([
         location: "Location 2",
         image: "https://cdn.vuetifyjs.com/images/cards/cooking.png",
         icon: "../../src/assets/images/icon-food.png",
-        level: "AVANZADO"
+        level: "HIGH"
     },
 
     {
@@ -27,7 +27,7 @@ const cards = reactive([
         location: "Location 3",
         image: "https://cdn.vuetifyjs.com/images/cards/docks.jpg",
         icon: "../../src/assets/images/icon-beach.png",
-        level: "INTERMEDIO"
+        level: "MIDDLE"
     },
 
     {
@@ -36,7 +36,7 @@ const cards = reactive([
         location: "Location 4",
         image: "https://cdn.vuetifyjs.com/images/cards/docks.jpg",
         icon: "../../src/assets/images/icon-beach.png",
-        level: "INTERMEDIO"
+        level: "MIDDLE"
     },
 
     {
@@ -46,7 +46,7 @@ const cards = reactive([
         description: "lorem ipmaskdhakshdhakshdkhaskdhkahsdkhaksd",
         image: "https://cdn.vuetifyjs.com/images/cards/docks.jpg",
         icon: "../../src/assets/images/icon-beach.png",
-        level: "FÁCIL"
+        level: "EASY"
     },
     {
         id: 6,
@@ -55,7 +55,7 @@ const cards = reactive([
         description: "lorem ipmaskdhakshdhakshdkhaskdhkahsdkhaksd",
         image: "https://cdn.vuetifyjs.com/images/cards/docks.jpg",
         icon: "../../src/assets/images/icon-beach.png",
-        level: "AVANZADO"
+        level: "HIGH"
     }
 
 ])

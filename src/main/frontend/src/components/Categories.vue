@@ -22,7 +22,7 @@ const clickHandler = (index) => {
 
 <template>
   <div class="text-left relative">
-    <v-card-title class="categorias text-h6 text-md-h5 font-italic text-lg-h4">Categorias</v-card-title>
+    <v-card-title class="categorias text-h6 text-md-h5 font-italic text-lg-h4">Categories</v-card-title>
   </div>
   <v-container class="container fill-height" fluid>
     <v-fade-transition mode="out-in">
