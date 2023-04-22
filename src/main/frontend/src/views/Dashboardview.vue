@@ -2,9 +2,16 @@
 import Navbar from "../components/Navbar.vue";
 import Categories from "../components/Categories.vue";
 import RecommendedRoutes from "../components/RecommendedRoutes.vue";
+import Greeting from "../components/Greeting.vue";
+import SocialNetwork from "../components/SocialNetwork.vue"
 </script>
 <template>
   <div>
+    <div class="container">
+      <Greeting class="saludo"/>
+      <SocialNetwork/>
+
+    </div>
     <Navbar />
     <v-container fluid>
       <v-row class="wrapper">
@@ -19,6 +26,14 @@ import RecommendedRoutes from "../components/RecommendedRoutes.vue";
   </div>
 </template>
 <style lang="scss" scope>
+
+.container{
+  .saludo{
+    display: flex;
+    position: absolute;
+    left: 10%;
+  }
+}
 .navbar {
   position: fixed;
   top: 0;

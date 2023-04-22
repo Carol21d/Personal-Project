@@ -1,7 +1,7 @@
 <script setup></script>
 <template>
   <div>
-    <h1>Hola, Ruteros !!!</h1>
+    <h1>Hello, travelers!!!</h1>
   </div>
 </template>
 <style lang="scss" scoped>
