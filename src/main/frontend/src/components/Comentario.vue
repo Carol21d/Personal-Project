@@ -49,7 +49,7 @@ export default {
 // };
 </script>
 
-<template><!--quitamos mt-12-->
+<template>
   <v-row class=" justify-center">
     <div class="container-comentario">
       <v-avatar class="avatar" size="80">
@@ -115,10 +115,10 @@ export default {
           left:60%;
           top: 55%;
         }
+      }
+      
+      </style>
 
 
-}
-
-</style>
 
 

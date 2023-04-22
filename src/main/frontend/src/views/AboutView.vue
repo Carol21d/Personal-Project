@@ -3,7 +3,8 @@ import Navbar from '../components/Navbar.vue';
 import Comentario from '../components/Comentario.vue';
 import EditComentario from '../components/EditComentario.vue';
 import Greeting from '../components/Greeting.vue';
-import SocialNetwork from '../components/SocialNetwork.vue'
+import SocialNetwork from '../components/SocialNetwork.vue';
+import CardDetails from '../components/CardDetails.vue'
 </script>
 <template>
   <div class="container">
@@ -11,34 +12,27 @@ import SocialNetwork from '../components/SocialNetwork.vue'
     <SocialNetwork/>
   </div>
   <v-card-title class="comentarios d-flex text-h6 text-md-h5 font-italic text-lg-h4">Comments</v-card-title>
-  <div class="wrapper">
-
-    <!-- <v-avatar class="avatar" size="60">
-      <v-img contain aspect-ratio="16/9" src="../src/assets/images/avatar2.png" alt="avatar-user"></v-img>
-    </v-avatar> -->
-    <Comentario />
-    <EditComentario/>
-    <Navbar />
-  </div>
+  <CardDetails class="card-detail"/>
+  <Comentario /> 
+  <EditComentario/>
+  <Navbar />
 </template>
 
 <style lang="scss" scoped>
-// .wrapper{
-//   background-color: whitesmoke;
-//   width: 500px;
-//   height: 100px;
-//   border-radius: 10px;
-//   border: 2px solid black;
- 
-//   .avatar{
-//     bottom:25px;
-//     right: 12px;
-//   }
-// }
-// 
+
 .comentarios{
   position:absolute;
-  left: 54%;
+  left: 53%;
   top: 15%;
 }
+.card-detail{
+  display: flex;
+  position:absolute;
+  right: 47%;
+  bottom: 30%;
+}
 </style>
+ 
+
+  
+ 

@@ -29,9 +29,9 @@
             display: flex;
             position: absolute;
             justify-content: flex-end;
-            gap: 10%;
+            gap: 7%;
             top: 65%;
-            left: 65%;
+            left: 57%;
     
         }
     }
