@@ -1,15 +1,19 @@
 <script setup>
-import { reactive } from 'vue';
-//creamos el objeto que contine los datos de mis 6 cards
+import { ref } from 'vue';
+import { useRouter } from 'vue-router';
 
-const cards = reactive([
+
+
+const router = useRouter();
+const cards = ref([
     {
         id: 1,
         title: "Card 1",
         location: "Location 1",
         image: "https://cdn.vuetifyjs.com/images/cards/docks.jpg",
         icon: "../../src/assets/images/icon-beach.png",
-        level: "EASY"
+        level: "EASY",
+        route:"/about"
     },
 
     {
@@ -18,7 +22,8 @@ const cards = reactive([
         location: "Location 2",
         image: "https://cdn.vuetifyjs.com/images/cards/cooking.png",
         icon: "../../src/assets/images/icon-food.png",
-        level: "HIGH"
+        level: "HIGH",
+        route:"/about"
     },
 
     {
@@ -27,7 +32,8 @@ const cards = reactive([
         location: "Location 3",
         image: "https://cdn.vuetifyjs.com/images/cards/docks.jpg",
         icon: "../../src/assets/images/icon-beach.png",
-        level: "MIDDLE"
+        level: "MIDDLE",
+        route:"/about"
     },
 
     {
@@ -36,7 +42,8 @@ const cards = reactive([
         location: "Location 4",
         image: "https://cdn.vuetifyjs.com/images/cards/docks.jpg",
         icon: "../../src/assets/images/icon-beach.png",
-        level: "MIDDLE"
+        level: "MIDDLE",
+        route: "/about"
     },
 
     {
@@ -46,7 +53,8 @@ const cards = reactive([
         description: "lorem ipmaskdhakshdhakshdkhaskdhkahsdkhaksd",
         image: "https://cdn.vuetifyjs.com/images/cards/docks.jpg",
         icon: "../../src/assets/images/icon-beach.png",
-        level: "EASY"
+        level: "EASY",
+        route:"/about"
     },
     {
         id: 6,
@@ -55,20 +63,24 @@ const cards = reactive([
         description: "lorem ipmaskdhakshdhakshdkhaskdhkahsdkhaksd",
         image: "https://cdn.vuetifyjs.com/images/cards/docks.jpg",
         icon: "../../src/assets/images/icon-beach.png",
-        level: "HIGH"
+        level: "HIGH",
+        route: "/about"
     }
 
-])
+]);
+
+const clickAbout = (index) => {
+    router.push(cards.value[index].route);
+};
 
 </script>
 <template>
     <v-container class="nave mx-auto" max-width="1200">
         <v-row>
-            <v-col v-for="card in cards" :key="card.id" cols="4">
+            <v-col v-for="(card, index) in cards" :key="card.id" cols="4">
                 <v-hover v-slot="{ isHovering, props }">
-                    <v-card v-bind="props" :elevation="isHovering ? 24 : 6" class="mx-auto pa-6" max-width="400">
-                        <v-img class="align-end text-white" height="190"
-                            src="https://cdn.vuetifyjs.com/images/cards/docks.jpg" cover>
+                    <v-card v-bind="props" :elevation="isHovering ? 24 : 6"   class="mx-auto pa-6" max-width="400"   @click="clickAbout(index)">
+                        <v-img class="align-end text-white" height="190" src="https://cdn.vuetifyjs.com/images/cards/docks.jpg" cover>
                             <v-card-title>{{ card.title }}</v-card-title>
                         </v-img>
                         <v-card-text>
@@ -77,8 +89,7 @@ const cards = reactive([
                         </v-card-text>
                         <v-card-actions>
                             <v-list class="justify-center ml-2">
-                                <v-img width="35" aspect-ratio="16/9" cover src="../../src/assets/images/icon-beach.png"
-                                    alt="icon-beach"></v-img>
+                                <v-img width="35" aspect-ratio="16/9" cover src="../../src/assets/images/icon-beach.png" alt="icon-beach"></v-img>
                             </v-list>
                             <v-btn type="text" class="justify-center ml-10 mt-4 text-h6 text-md-h5 text-lg-h6"
                                 color="orange">

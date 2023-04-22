@@ -6,12 +6,14 @@ import AboutView from "./views/AboutView.vue";
 
 
 
+
 </script>
 
 <template>
- <AboutView/>
+
+ <!-- <AboutView/> -->
 <!-- <Dashboardview/> -->
-  <!-- <RouterView /> -->
+  <RouterView />
 </template>
 
 <style scoped></style>

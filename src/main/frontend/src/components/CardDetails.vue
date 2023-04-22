@@ -21,7 +21,7 @@
                       <div class="icons">
                           <v-icon size="x-large"  class="mr-4" color="#E9800D" icon="mdi-map-search-outline"></v-icon>
                           <v-icon size="x-large" class="mr-4" color="#000000" icon="mdi-tshirt-crew-outline"></v-icon>
-                          <v-icon size="x-large" color="#06225D" icon="mdi-bottle-soda-classic"></v-icon>
+                          <v-icon size="x-large" color="blue darken-2" icon="mdi-bottle-soda-classic"></v-icon>
 
                       </div>
              

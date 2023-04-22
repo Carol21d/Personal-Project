@@ -5,8 +5,8 @@
             <v-img contain aspect-ratio="16/9" src="../src/assets/images/avatar2.png" alt="avatar-user"></v-img>
         </v-avatar>
         <div class="btn">
-            <v-btn variant="tonal" class="submit" onclick="submit">SUBMIT</v-btn>
-            <v-btn variant="tonal" class="mr-5" onclick="cancel">CANCEL</v-btn>
+            <v-btn variant="tonal" class="submit" color="light-green darken-4" onclick="submit">SUBMIT</v-btn>
+            <v-btn variant="tonal" class="mr-5"  color="red accent-4 " onclick="cancel">CANCEL</v-btn>
         </div>
     </div>
     </template>

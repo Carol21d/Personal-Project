@@ -1,6 +1,20 @@
-<script></script>
+<script setup>
+import {ref} from'vue';
+import {useRouter} from 'vue-router';
+
+
+const router = useRouter();
+const item = ref ([
+    { route: "/about"}
+]);
+
+ const topath = (index) =>{
+    router.push(item.value[index].route);
+ };
+
+</script>
 <template>
-    <div class="ca">
+    <div class="ca"  @click="topath(0)">
         <div class=" text-left">
             <v-card-title class="rutas text-h6 text-md-h5 font-italic text-lg-h4" style="z-index:1">Favourites Routes</v-card-title>
         </div>
@@ -16,7 +30,7 @@
                 </v-card-text>
                 <v-card-actions>
                     <v-list class="justify-center ml-2">
-                        <v-img width="35" aspect-ratio="16/9" cover src="../../src/assets/images/icon-beach.png"
+                        <v-img width="35" aspect-ratio="16/9"  cover src="../../src/assets/images/icon-beach.png"
                             alt="icon-beach"></v-img>
                     </v-list>
                     <v-btn type="text" class="justify-center ml-10 mt-4 text-h6 text-md-h5 text-lg-h6" color="orange">Middle</v-btn>
