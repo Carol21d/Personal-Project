@@ -94,7 +94,7 @@ const cards = reactive([
 .nave{
     display: flex;
     position: absolute;
-    top: 30%;
+    top: 25%;
     left: 10%;
 }
 </style>
