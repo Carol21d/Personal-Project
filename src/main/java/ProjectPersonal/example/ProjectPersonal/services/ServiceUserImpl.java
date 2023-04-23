@@ -49,9 +49,12 @@ public class ServiceUserImpl implements ServiceUser {
 
     public  User update(User user, Long id){
         User userCurrent = repositoryUser.findById(id).orElseThrow();
+        
 
+        System.out.println("comment before update" +userCurrent.getComment());
         userCurrent.setName(user.getName());
         userCurrent.setComment(user.getComment());
+        System.out.println("comment after update" + userCurrent.getComment());
 
         return repositoryUser.save(userCurrent);
 

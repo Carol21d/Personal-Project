@@ -56,39 +56,21 @@ public class controllerUser {
         service.deleteById(id);
     }
 
-    // @PutMapping(path = "{id}")
-    // public ResponseEntity<?> update(@RequestBody User newUser, @PathVariable(value ="id") Long id){
-    //     User serviceU = service.update(newUser, id);
-
-    //     return ResponseEntity.ok().build(serviceU);
-    // }
-
-
-
-
-
-    //metdo put que no muestra el put en el postman 1
-    // @PutMapping( value ="/{id}")
-    // public ResponseEntity<?> updating(@RequestBody User userDetails, @PathVariable Long id){
-    //     Optional<User> user = service.findById(id);
-    //     if(!user.isPresent()){
-    //         return ResponseEntity.notFound().build();
-    //     }
-    //     user.get().setName(userDetails.getName());
-    //     return ResponseEntity.ok().build();
-    // }
-
-
-
-
-   
     @PutMapping( "/{id}")
     public ResponseEntity<?> update(@RequestBody User userDetails, @PathVariable Long id){
         Optional<User> user = service.findById(id);
         if(!user.isPresent()){
             return ResponseEntity.notFound().build();
         }
+
         user.get().setName(userDetails.getName());
+        user.get().setComment(userDetails.getComment());
         return ResponseEntity.status(201).body(service.save(user.get()));
     }
 }
+   
+
+
+
+
+
