@@ -25,7 +25,7 @@ import { useRouter } from 'vue-router';
     <SocialNetwork/>
   </div>
   <div>
-    <v-btn class="btn-back" prepend-icon="mdi-arrow-left" variant="tonal" @click="goback(s)">Back
+    <v-btn class="btn-back" prepend-icon="mdi-arrow-left" variant="tonal" @click="goback()">Back
     </v-btn>
   </div>
   <v-card-title class="comentarios d-flex text-h6 text-md-h5 font-italic text-lg-h4">Comments</v-card-title>
