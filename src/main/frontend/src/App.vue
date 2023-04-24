@@ -1,28 +1,22 @@
 <script setup>
 import { RouterLink, RouterView } from "vue-router";
-import HelloWorld from "./components/HelloWorld.vue";
-
 import Dashboardview from "./views/Dashboardview.vue";
+import AboutView from "./views/AboutView.vue";
+import CardDetails from "./components/CardDetails.vue"
+import NotFound404 from "./views/NotFound404.vue"
+
 </script>
-
 <template>
-  <Dashboardview />
-  
 
-  <!-- <header>
-  
-
-     <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
-      </nav>
-    </div> -->
-  <!-- </header> -->
-
-  <!-- <RouterView /> -->
+  <RouterView />
 </template>
 
-<style scoped></style>
+<style lang="scss" scoped>
+
+</style>
+
+
+
+
+
+

@@ -1,0 +1,1 @@
+INSERT INTO users (id_user, name , comment) VALUES (default,'B', 'test de pruebas')

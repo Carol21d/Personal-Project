@@ -1,5 +1,14 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
+import LandingView from '../views/LandingView.vue'
+import Dashboard from '../views/Dashboardview.vue'
+import AboutView from '../views/AboutView.vue'
+import AquacticView from '../views/Categories/AquaticView.vue'
+import BikesView from '../views/Categories/BikesView.vue'
+import ClimbingView from '../views/Categories/ClimbingView.vue'
+import MountainsView from '../views/Categories/MountainsView.vue'
+import CombinedView from '../views/Categories/CombinedView.vue'
+import PetsView  from '../views/Categories/PetsView.vue'
+import NotFound404 from '../views/NotFound404.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -7,17 +16,64 @@ const router = createRouter({
     {
       path: '/',
       name: 'home',
-      component: HomeView
+      component: LandingView
     },
     {
-      path: '/about',
-      name: 'about',
-      // route level code-splitting
-      // this generates a separate chunk (About.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => import('../views/AboutView.vue')
+      path: '/dashboard',
+      name: 'dashboard',
+      // component:() => import('../views/Dashboardview.vue')
+      component:Dashboard
+    },
+    {
+     path: '/about',
+     name: 'about',
+     component:AboutView
+    },
+
+    {
+      path:'/pageError',
+      name: "errorpage",
+      component: NotFound404
+
+    },
+
+    {
+      path: '/aquactic',
+      name: 'aquactic',
+      // component: () =>import('@/views/AquaticView.vue')
+      component:AquacticView
+    },
+    {
+      path: '/bikes',
+      name: 'bike',
+      component:BikesView
+    },
+    {
+      path: '/climbing',
+      name: 'climbing',
+      component: ClimbingView
+    },
+    {
+      path: '/combined',
+      name: 'combined',
+      component:CombinedView
+    },
+    {
+      path: '/mountains',
+      name: 'mountains',
+      component: MountainsView
+    },
+    {
+      path: '/pets',
+      name: 'pets',
+      component: PetsView
     }
+
   ]
+
+  
 })
 
-export default router
+
+
+export default router;
