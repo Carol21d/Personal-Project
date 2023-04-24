@@ -8,6 +8,7 @@ import ClimbingView from '../views/Categories/ClimbingView.vue'
 import MountainsView from '../views/Categories/MountainsView.vue'
 import CombinedView from '../views/Categories/CombinedView.vue'
 import PetsView  from '../views/Categories/PetsView.vue'
+import NotFound404 from '../views/NotFound404.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -27,6 +28,13 @@ const router = createRouter({
      path: '/about',
      name: 'about',
      component:AboutView
+    },
+
+    {
+      path:'/pageError',
+      name: "errorpage",
+      component: NotFound404
+
     },
 
     {
