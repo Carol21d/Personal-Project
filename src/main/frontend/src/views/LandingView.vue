@@ -36,7 +36,8 @@
 </template>
 <style lang="scss" scoped>
 main {
-  background-image: url("../assets/images/background--img.png");
+  background-image: url("../assets/images/b5.jpg");
+  background-size: cover;
   width: 100%;
   background-position: 100%;
   background-size: center/100%;

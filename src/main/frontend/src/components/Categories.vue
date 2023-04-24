@@ -59,7 +59,7 @@ body {
 .categorias {
   position: absolute;
   left: 10.9%;
-  top: 19%;
+  top: 17%;
   font-family: Kalam !important;
   font-size: 40px;
   font-style: italic;

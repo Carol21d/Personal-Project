@@ -36,6 +36,8 @@ import SocialNetwork from '../../components/SocialNetwork.vue'
             position:absolute;
             left: 10%;
             top:17.2%;
+            color: white;
+            text-decoration: underline;
         }
     }
 

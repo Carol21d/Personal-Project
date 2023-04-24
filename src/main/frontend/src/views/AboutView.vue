@@ -31,8 +31,8 @@ onBeforeMount(async() => {
 
 </script>
 <template>
-  <div class="wrapper">
-    <div class="container">
+  <div class="wrapper ">
+    <div class="container ">
       <Greeting class="saludo d-flex"/>
       <SocialNetwork/>
     </div>
@@ -53,7 +53,9 @@ onBeforeMount(async() => {
   </div>
 </template>
 <style lang="scss" scoped>
+
 .wrapper{
+
   .btn-back{
    display: flex;
    position: absolute;

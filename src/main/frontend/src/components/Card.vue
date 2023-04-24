@@ -10,7 +10,7 @@ const cards = ref([
         id: 1,
         title: "Card 1",
         location: "Location 1",
-        image: "https://cdn.vuetifyjs.com/images/cards/docks.jpg",
+        src: "../../src/assets/images/card1.jpg",
         icon: "../../src/assets/images/icon-beach.png",
         level: "EASY",
         route:"/about"
@@ -20,7 +20,7 @@ const cards = ref([
         id: 2,
         title: "Card 2",
         location: "Location 2",
-        image: "https://cdn.vuetifyjs.com/images/cards/cooking.png",
+        src: "../../src/assets/images/card1.jpg",
         icon: "../../src/assets/images/icon-food.png",
         level: "HIGH",
         route:"/about"
@@ -30,7 +30,7 @@ const cards = ref([
         id: 3,
         title: "Card 3",
         location: "Location 3",
-        image: "https://cdn.vuetifyjs.com/images/cards/docks.jpg",
+        src: "../../src/assets/images/card1.jpg",
         icon: "../../src/assets/images/icon-beach.png",
         level: "MIDDLE",
         route:"/about"
@@ -40,7 +40,7 @@ const cards = ref([
         id: 4,
         title: "Card 4",
         location: "Location 4",
-        image: "https://cdn.vuetifyjs.com/images/cards/docks.jpg",
+        src: "../../src/assets/images/card1.jpg",
         icon: "../../src/assets/images/icon-beach.png",
         level: "MIDDLE",
         route: "/about"
@@ -50,8 +50,8 @@ const cards = ref([
         id: 5,
         title: "Card 5",
         location: "Location 5",
-        description: "lorem ipmaskdhakshdhakshdkhaskdhkahsdkhaksd",
-        image: "https://cdn.vuetifyjs.com/images/cards/docks.jpg",
+       
+        src: "../../src/assets/images/card1.jpg",
         icon: "../../src/assets/images/icon-beach.png",
         level: "EASY",
         route:"/about"
@@ -60,8 +60,8 @@ const cards = ref([
         id: 6,
         title: "Card 6",
         location: "Location 6",
-        description: "lorem ipmaskdhakshdhakshdkhaskdhkahsdkhaksd",
-        image: "https://cdn.vuetifyjs.com/images/cards/docks.jpg",
+        
+        src: "../../src/assets/images/card1.jpg",
         icon: "../../src/assets/images/icon-beach.png",
         level: "HIGH",
         route: "/about"
@@ -80,11 +80,12 @@ const clickAbout = (index) => {
             <v-col v-for="(card, index) in cards" :key="card.id" cols="4">
                 <v-hover v-slot="{ isHovering, props }">
                     <v-card v-bind="props" :elevation="isHovering ? 24 : 6"   class="mx-auto pa-6" max-width="400"   @click="clickAbout(index)">
-                        <v-img class="align-end text-white" height="190" src="https://cdn.vuetifyjs.com/images/cards/docks.jpg" cover>
+                        <v-img class="align-end text-white" height="190" src="../../src/assets/images/card4.jpg" cover>
                             <v-card-title>{{ card.title }}</v-card-title>
                         </v-img>
                         <v-card-text>
                             <div>{{ card.location }}</div>
+                            
 
                         </v-card-text>
                         <v-card-actions>
