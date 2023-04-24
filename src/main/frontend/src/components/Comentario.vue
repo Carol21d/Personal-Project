@@ -21,12 +21,16 @@ const comment = ref("");
 const commentstore = commentsStore();
 
 
+const rulesName = [(v) => !!v || "Name is required"];
+const rulesComment = [(v) => !!v || "Comment"];
+
 function send() {
   const comments = {
     name: name.value,
     comment: comment.value,
   };
   commentstore.saveComments(comments)
+  window.alert('Formulario enviado correctamente!');
 };
 
 const resetForm = () => {
@@ -58,10 +62,10 @@ const resetForm = () => {
               <v-container>
                 <v-row>
                   <v-col cols="12" sm="6" md="4">
-                    <v-text-field v-model="name" label="Name*"></v-text-field>
+                    <v-text-field v-model="name" :rules="rulesName" required label="Name*"></v-text-field>
                   </v-col>
                   <v-col cols="12">
-                    <v-textarea v-model="comment" label="Comments*" auto-grow variant="filled" color="deep-purple"
+                    <v-textarea v-model="comment" :rules=" rulesComment"  label="Comments*" auto-grow variant="filled" color="deep-purple"
                       rows="3"></v-textarea>
                   </v-col>
                 </v-row>
@@ -72,7 +76,7 @@ const resetForm = () => {
           <v-card-actions>
             <v-spacer></v-spacer>
             <v-btn color="blue-darken-1" variant="text" v-on:click="dialog = false; resetForm()">Close</v-btn>
-            <v-btn color="blue-darken-1" variant="text" v-on:click=" send() "> Save</v-btn>
+            <v-btn color="blue-darken-1" variant="text" v-on:click="send()" :disabled="!name || !comment"> Save</v-btn>
           </v-card-actions>
         </v-card>
       </v-dialog>
