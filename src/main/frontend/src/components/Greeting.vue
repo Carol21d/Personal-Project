@@ -7,8 +7,11 @@
 <style lang="scss" scoped>
 h1 {
   font-family: Kalam;
-  font-size: 40px;
+  font-size: 55px;
   font-style: italic;
   font-weight: 600;
+  color: black;
+  
+
 }
 </style>

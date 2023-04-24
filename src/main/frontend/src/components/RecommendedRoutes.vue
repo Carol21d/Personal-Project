@@ -20,7 +20,7 @@ const item = ref ([
         </div>
         <v-hover v-slot="{ isHovering, props }">
             <v-card v-bind="props" :elevation="isHovering ? 24 : 6" class=" mx-auto pa-6" max-width="500">
-                <v-img class="align-end text-white" height="200" src="https://cdn.vuetifyjs.com/images/cards/docks.jpg"
+                <v-img class="align-end text-white" height="250" src="https://cdn.vuetifyjs.com/images/cards/docks.jpg"
                     cover>
                     <v-card-title>Lorem ipsum</v-card-title>
                 </v-img>
@@ -51,12 +51,15 @@ const item = ref ([
     font-size: 40px;
     font-style: italic;
     font-weight: 600;
+    color: white;
 }
 
 .ca {
     display: flex;
     position: relative;
-    bottom: 14%;
+    bottom: 9%;
+    right:5%;
+    
 }
 </style>
 

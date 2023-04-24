@@ -102,13 +102,18 @@ const clickAbout = (index) => {
     </v-container>
 </template>
 <style lang="scss" scoped>
+
+
 .nave{
     display: flex;
     position: absolute;
     top: 25%;
     left: 10%;
 }
+
 </style>
+
+
 
 
 

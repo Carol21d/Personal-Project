@@ -22,12 +22,7 @@
               </router-link>
 
             </v-list-item>
-            <v-list-item>
-              <router-link to="/dashboard">
-                <v-icon size="x-large" color="#000000" icon="mdi-view-dashboard"></v-icon>
-              </router-link>
-
-            </v-list-item>
+           
           </v-list-item-group>
         </v-list>
       </v-navigation-drawer>

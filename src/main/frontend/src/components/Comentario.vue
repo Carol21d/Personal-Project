@@ -1,63 +1,38 @@
 <script setup>
-import { ref, defineProps} from "vue";
+import { ref, defineProps } from "vue";
 import { commentsStore } from "../stores/commentsUser";
 
 const props = defineProps({
-  id:{
+  id: {
     type: Number,
   },
-  comment:{
+  comment: {
     type: String,
   },
-  name:{
-    type:String,
+  name: {
+    type: String,
   }
 })
 
-//declaramos nuestras variables
+
 const dialog = ref(false);
 const name = ref("");
 const comment = ref("");
 const commentstore = commentsStore();
 
 
-function send(){
-   const comments = {
-    name:name.value,
+function send() {
+  const comments = {
+    name: name.value,
     comment: comment.value,
-   };
- commentstore.saveComments(comments)
+  };
+  commentstore.saveComments(comments)
 };
-
-
-
-
-
-
-
-
-// const saveComment = () => {
-//   commentsStore.addComment({
-//     name: name.value,
-//     comment: comment.value
-//   });
-
-//   dialog.value = false;
-//   resetForm();
-// };
-
-
 
 const resetForm = () => {
   name.value = "";
   comment.value = "";
 };
-
-
-
-
-
-
 
 </script>
 
@@ -86,8 +61,8 @@ const resetForm = () => {
                     <v-text-field v-model="name" label="Name*"></v-text-field>
                   </v-col>
                   <v-col cols="12">
-                    <v-textarea v-model="comment" label="Comments*" auto-grow variant="filled"
-                      color="deep-purple"  rows="3"></v-textarea>
+                    <v-textarea v-model="comment" label="Comments*" auto-grow variant="filled" color="deep-purple"
+                      rows="3"></v-textarea>
                   </v-col>
                 </v-row>
               </v-container>
@@ -97,7 +72,7 @@ const resetForm = () => {
           <v-card-actions>
             <v-spacer></v-spacer>
             <v-btn color="blue-darken-1" variant="text" v-on:click="dialog = false; resetForm()">Close</v-btn>
-            <v-btn color="blue-darken-1" variant="text" v-on:click="send()"> Save</v-btn>
+            <v-btn color="blue-darken-1" variant="text" v-on:click=" send() "> Save</v-btn>
           </v-card-actions>
         </v-card>
       </v-dialog>
@@ -129,6 +104,23 @@ const resetForm = () => {
   }
 }
 </style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

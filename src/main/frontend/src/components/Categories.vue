@@ -6,9 +6,9 @@ import { useRouter } from 'vue-router';
 const router = useRouter();
 const items = ref([
   { src: "../../src/assets/images/mixto.jpg", route: "/combined", category: "Mixed Routes" },
-  { src: "../../src/assets/images/escalada.jpg", route: "/climbing", category: "Climbing Routes" },
+  { src: "../../src/assets/images/escala.jpg", route: "/climbing", category: "Climbing Routes" },
   { src: "../../src/assets/images/dogs.png", route: "/pets", category: "Pet Friendly Routes" },
-  { src: "../../src/assets/images/acuatico.png", route: "/aquactic", category: "Aquatic Routes" },
+  { src: "../../src/assets/images/aqua.jpg", route: "/aquactic", category: "Aquatic Routes" },
   { src: "../../src/assets/images/montana.jpg", route: "/mountains", category: "Mountains Routes" },
   { src: "../../src/assets/images/senderismo.jpg", route: "/bikes", category: "Hiking Routes" },
 ]);
@@ -28,7 +28,7 @@ const clickHandler = (index) => {
     <v-fade-transition mode="out-in">
       <v-row>
         <v-col cols="6" md="4" class="galeria ml-4" v-for="(item, index) in items" :key="index">
-          <v-img :src="item.src" height="120" cover class="img" @click="clickHandler(index)">
+          <v-img :src="item.src" height="160" cover class="img" @click="clickHandler(index)">
             <div class="categoria">{{ item.category }}</div>
           </v-img>
         </v-col>
@@ -38,6 +38,24 @@ const clickHandler = (index) => {
 </template>
 
 <style lang="scss" scoped>
+body {
+  margin: 0;
+  padding: 0;
+}
+.background {
+  
+  overflow: hidden;
+  background-image: url("../../src/assets/images/bg6.jpg");
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  object-fit: contain;
+}
+
+
 .categorias {
   position: absolute;
   left: 10.9%;
@@ -46,6 +64,7 @@ const clickHandler = (index) => {
   font-size: 40px;
   font-style: italic;
   font-weight: 600;
+  color: white;
 }
 
 .container {
@@ -54,15 +73,15 @@ const clickHandler = (index) => {
   left: 10.2%;
   bottom: 17%;
 
+  
+
   .galeria {
     padding: 14px;
     position: relative;
     bottom: 20px;
 
     .img {
-      // transform: translateY(-5px);
-      // box-shadow: 0px 2px 21px 7px rgba(0, 0, 0, 0.51);
-      // transition: transform 0.3s ease, box-shadow 0.3s ease;
+     
        position: relative;
        overflow: hidden;
        .categoria {

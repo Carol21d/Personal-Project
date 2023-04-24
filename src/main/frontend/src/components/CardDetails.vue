@@ -32,6 +32,7 @@
 </template>
 
 <style lang="scss" scoped>
+
 .wrapper {
     display: flex;
     position: absolute;
