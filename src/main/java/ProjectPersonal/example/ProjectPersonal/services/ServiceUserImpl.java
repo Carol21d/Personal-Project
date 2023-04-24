@@ -27,7 +27,9 @@ public class ServiceUserImpl implements ServiceUser {
     @Transactional
     @Override
     public void deleteById(Long id) {
-        repositoryUser.deleteById(id);;
+        User commentDB = repositoryUser.findById(id).orElseThrow();
+        repositoryUser.delete(commentDB);
+      
         
     }
 

@@ -5,10 +5,21 @@ import EditComentario from '../components/EditComentario.vue';
 import Greeting from '../components/Greeting.vue';
 import SocialNetwork from '../components/SocialNetwork.vue';
 import CardDetails from '../components/CardDetails.vue'
+import { commentsStore } from '../stores/commentsUser';
+import {onBeforeMount} from 'vue';
+
 import { useRouter } from 'vue-router';
 
 
+const commentstore = commentsStore();
+
+
+onBeforeMount(async() => {
+   await commentstore.getAll();
+});
+
  const router = useRouter();
+
 
 
  const goback = () =>{
@@ -25,13 +36,13 @@ import { useRouter } from 'vue-router';
     <SocialNetwork/>
   </div>
   <div>
-    <v-btn class="btn-back" prepend-icon="mdi-arrow-left" variant="tonal" @click="goback()">Back
+    <v-btn class="btn-back" prepend-icon="mdi-arrow-left" variant="tonal" v-on:click="goback()">Back
     </v-btn>
   </div>
   <v-card-title class="comentarios d-flex text-h6 text-md-h5 font-italic text-lg-h4">Comments</v-card-title>
   <CardDetails class="card-detail"/>
   <Comentario /> 
-  <EditComentario/>
+  <EditComentario v-for="comments of commentstore.comments" :id="comments.id"   :name="comments.name" :comment="comments.comment"/>
   <Navbar />
 </template>
 

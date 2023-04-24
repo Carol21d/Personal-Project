@@ -5,12 +5,12 @@ import { useRouter } from 'vue-router';
 
 const router = useRouter();
 const items = ref([
-  { src: "../../src/assets/images/combinados.png", route: "/combined", category: "Mixed Routes" },
-  { src: "../../src/assets/images/escalada.png", route: "/climbing", category: "Climbing Routes" },
-  { src: "../../src/assets/images/pet.png", route: "/pets", category: "Pet Friendly Routes" },
-  { src: "../../src/assets/images/acuaticos.png", route: "/aquactic", category: "Aquatic Routes" },
-  { src: "../../src/assets/images/mountain.png", route: "/mountains", category: "Mountains Routes" },
-  { src: "../../src/assets/images/senderismo.png", route: "/bikes", category: "Hiking Routes" },
+  { src: "../../src/assets/images/mixto.jpg", route: "/combined", category: "Mixed Routes" },
+  { src: "../../src/assets/images/escalada.jpg", route: "/climbing", category: "Climbing Routes" },
+  { src: "../../src/assets/images/dogs.png", route: "/pets", category: "Pet Friendly Routes" },
+  { src: "../../src/assets/images/acuatico.png", route: "/aquactic", category: "Aquatic Routes" },
+  { src: "../../src/assets/images/montana.jpg", route: "/mountains", category: "Mountains Routes" },
+  { src: "../../src/assets/images/senderismo.jpg", route: "/bikes", category: "Hiking Routes" },
 ]);
 
 const transparent = ref("rgba(255, 255, 255, 0)");
@@ -24,7 +24,7 @@ const clickHandler = (index) => {
   <div class="text-left relative">
     <v-card-title class="categorias text-h6 text-md-h5 font-italic text-lg-h4">Categories</v-card-title>
   </div>
-  <v-container class="container fill-height" fluid>
+  <v-container class="container  fill-height" fluid>
     <v-fade-transition mode="out-in">
       <v-row>
         <v-col cols="6" md="4" class="galeria ml-4" v-for="(item, index) in items" :key="index">
